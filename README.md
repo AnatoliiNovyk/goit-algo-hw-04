@@ -121,3 +121,5 @@ result = merge_k_lists(lists)
 - **Бібліотеки:** `timeit`, `random`, `typing`
 - **Методологія тестування:** Множинні запуски з усередненням результатів
 - **Генерація тестових даних:** Випадкові цілі числа
+
+##### goit-algo-hw-04 на [Colab](https://colab.research.google.com/drive/1MUQDQy2Ivv9a1cX8l4YerlZJqFe8z2QC#scrollTo=TaEIcFr9vCDe&line=1&uniqifier=1 "goit-algo-hw-04 на Colab")
