@@ -118,6 +118,6 @@ result = merge_k_lists(lists)
 ------------
 
 
-![](pic/sorting_algorithms_performance_log.png)
+![](https://github.com/AnatoliiNovyk/goit-algo-hw-04/blob/263caa90f26481190d4f97e63ca7bff9b82479a9/pic/sorting_algorithms_performance_log.png)
 
 ##### goit-algo-hw-04 на [Colab](https://colab.research.google.com/drive/1MUQDQy2Ivv9a1cX8l4YerlZJqFe8z2QC#scrollTo=TaEIcFr9vCDe&line=1&uniqifier=1 "goit-algo-hw-04 на Colab")
