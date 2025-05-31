@@ -115,6 +115,10 @@ result = merge_k_lists(lists)
 2. **Insertion Sort** можна покращити за допомогою бінарного пошуку
 3. **Timsort** вже оптимальний для Python та реальних даних
 
+------------
+
+⚙️
+
 ![](pic/sorting_algorithms_performance_log.png)
 
 ##### goit-algo-hw-04 на [Colab](https://colab.research.google.com/drive/1MUQDQy2Ivv9a1cX8l4YerlZJqFe8z2QC#scrollTo=TaEIcFr9vCDe&line=1&uniqifier=1 "goit-algo-hw-04 на Colab")
