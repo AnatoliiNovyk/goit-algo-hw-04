@@ -120,4 +120,10 @@ result = merge_k_lists(lists)
 
 ![](https://github.com/AnatoliiNovyk/goit-algo-hw-04/blob/263caa90f26481190d4f97e63ca7bff9b82479a9/pic/sorting_algorithms_performance_log.png)
 
+### Висновки
+
+- Insertion Sort ефективний лише на малих масивах (до 100–500 елементів), але швидко втрачає продуктивність.
+- Merge Sort стабільно працює на всіх розмірах даних.
+- Timsort є найшвидшим завдяки вбудованим оптимізаціям Python.
+
 ##### goit-algo-hw-04 на [Colab](https://colab.research.google.com/drive/1MUQDQy2Ivv9a1cX8l4YerlZJqFe8z2QC#scrollTo=TaEIcFr9vCDe&line=1&uniqifier=1 "goit-algo-hw-04 на Colab")
