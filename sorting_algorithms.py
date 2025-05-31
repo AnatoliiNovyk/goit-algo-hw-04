@@ -2,17 +2,39 @@ import timeit
 import random
 from typing import List
 
-def bubble_sort(arr):
-    """Сортування бульбашкою - O(n²)"""
-    n = len(arr)
+def merge_sort(arr):
+    """Сортування злиттям - O(n log n)"""
     arr_copy = arr.copy()
     
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr_copy[j] > arr_copy[j + 1]:
-                arr_copy[j], arr_copy[j + 1] = arr_copy[j + 1], arr_copy[j]
+    def merge(left, right):
+        """Злиття двох відсортованих масивів"""
+        result = []
+        i, j = 0, 0
+        
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                result.append(left[i])
+                i += 1
+            else:
+                result.append(right[j])
+                j += 1
+        
+        result.extend(left[i:])
+        result.extend(right[j:])
+        return result
     
-    return arr_copy
+    def merge_sort_recursive(arr):
+        """Рекурсивна частина сортування злиттям"""
+        if len(arr) <= 1:
+            return arr
+            
+        mid = len(arr) // 2
+        left = merge_sort_recursive(arr[:mid])
+        right = merge_sort_recursive(arr[mid:])
+        
+        return merge(left, right)
+    
+    return merge_sort_recursive(arr_copy)
 
 def insertion_sort(arr):
     """Сортування вставками - O(n²)"""
@@ -54,7 +76,7 @@ def compare_sorting_algorithms():
     # Різні розміри масивів для тестування
     sizes = [100, 500, 1000, 2000]
     algorithms = [
-        ("Bubble Sort", bubble_sort),
+        ("Merge Sort", merge_sort),
         ("Insertion Sort", insertion_sort),
         ("Timsort (Python)", timsort_wrapper)
     ]
@@ -189,10 +211,17 @@ if __name__ == "__main__":
     
     print("\n=== ТЕОРЕТИЧНИЙ АНАЛІЗ ===")
     print("Складність алгоритмів сортування:")
-    print("• Bubble Sort: O(n²) - найгірший для великих масивів")
+    print("• Merge Sort: O(n log n) - стабільний, гарантована складність")
     print("• Insertion Sort: O(n²) - ефективний для малих або майже відсортованих масивів")
-    print("• Timsort: O(n log n) - найкращий загальний вибір, адаптивний")
+    print("• Timsort: O(n log n) - гібридний алгоритм, адаптивний")
+    print("\nЯк Timsort використовує переваги обох алгоритмів:")
+    print("• Виявляє природні послідовності (runs) у даних")
+    print("• Для коротких runs використовує Insertion Sort (ефективний на малих масивах)")
+    print("• Для об'єднання runs використовує модифікований Merge Sort")
+    print("• Адаптується до структури даних (майже відсортовані масиви сортуються швидше)")
     print("\nРекомендації:")
     print("• Для малих масивів (< 50): Insertion Sort")
-    print("• Для великих масивів: Timsort (вбудований sort())")
-    print("• Bubble Sort: тільки для навчальних цілей")
+    print("• Для великих масивів з гарантованою складністю: Merge Sort")
+    print("• Для загального використання: Timsort (вбудований sort())")
+    print("• Timsort об'єднує переваги обох: швидкість Insertion Sort на малих")
+    print("  фрагментах та надійність Merge Sort для великих об'ємів даних")
