@@ -82,17 +82,9 @@ result = merge_k_lists(lists)
 2. **Bubble Sort** можна покращити ранньою зупинкою
 3. **Timsort** вже оптимальний для Python
 
-### ⚙️ Результат після запуску:
-
-
-------------
-
+### ⚙️ РезультатИ запуску:
 
 `# python sorting_algorithms.py`
-
-
-------------
-
 
 
     === ПОРІВНЯННЯ АЛГОРИТМІВ СОРТУВАННЯ ===
@@ -153,10 +145,4 @@ result = merge_k_lists(lists)
     • Bubble Sort: тільки для навчальних цілей
 
 
-------------
-
-
 ##### GOIT-ALGO-HW-04 на [Colab](https://colab.research.google.com/drive/1MUQDQy2Ivv9a1cX8l4YerlZJqFe8z2QC?usp=sharing "Heading link")
-
-
-------------
