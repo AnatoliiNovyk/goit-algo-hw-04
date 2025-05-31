@@ -82,7 +82,7 @@ result = merge_k_lists(lists)
 2. **Bubble Sort** можна покращити ранньою зупинкою
 3. **Timsort** вже оптимальний для Python
 
-### ⚙️ РезультатИ запуску:
+### ⚙️ Результати запуску:
 
 `# python sorting_algorithms.py`
 
