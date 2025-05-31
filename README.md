@@ -117,7 +117,6 @@ result = merge_k_lists(lists)
 
 ------------
 
-⚙️
 
 ![](pic/sorting_algorithms_performance_log.png)
 
